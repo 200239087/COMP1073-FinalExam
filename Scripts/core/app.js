@@ -49,6 +49,7 @@
         function Roll() {
             die1 = randomNumber();
             die2 = randomNumber();
+            // Different dice roll causes different image and label
             switch (die1) {
                 case 1:
                     {
@@ -93,6 +94,7 @@
                     }
                     break;
             }
+            // Different dice roll causes different image and label
             switch (die2) {
                 case 1:
                     {
@@ -138,8 +140,10 @@
                     break;
             }
         }
+        // Places the Roll button
         rollButton = new objects.Button("../../Assets/images/rollButton.png", canvasHalfWidth + 100, canvasHalfHeight + 100, true, 150, 50);
         stage.addChild(rollButton);
+        // When the Roll button is pushed, call the Roll function
         rollButton.on("click", function (event) {
             Roll();
         });

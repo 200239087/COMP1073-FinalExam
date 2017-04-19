@@ -62,6 +62,7 @@
       die1 = randomNumber();
       die2 = randomNumber();
 
+      // Different dice roll causes different image and label
       switch (die1) {
         case 1: {
           firstDie = new objects.Button("../../Assets/images/1.png", canvasHalfWidth - 200, canvasHalfHeight - 250, false, canvasHalfWidth * 0.1, canvasHalfHeight * 0.1);
@@ -95,6 +96,7 @@
         } break;
       }
 
+      // Different dice roll causes different image and label
       switch (die2) {
         case 1: {
           secondDie = new objects.Button("../../Assets/images/1.png", canvasHalfWidth + 200, canvasHalfHeight - 250, false, 1, 1);
@@ -129,10 +131,11 @@
       }
     }
 
-
+    // Places the Roll button
     rollButton = new objects.Button("../../Assets/images/rollButton.png", canvasHalfWidth + 100, canvasHalfHeight + 100, true, 150, 50);
     stage.addChild(rollButton);
 
+    // When the Roll button is pushed, call the Roll function
     rollButton.on("click", function (event: createjs.MouseEvent) {
       Roll();
     })
