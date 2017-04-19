@@ -1,0 +1,27 @@
+{
+  "name": "comp1073-w2017-FinalExam",
+  "authors": [
+  ],
+  "description": "Final Exam Template",
+  "main": "",
+  "keywords": [
+    "CreateJS",
+    "TypeScript"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "Scripts/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "TweenJS": "^0.6.2",
+    "EaselJS": "^0.8.2",
+    "SoundJS": "^0.6.2",
+    "PreloadJS": "^0.6.2"
+  }
+}
