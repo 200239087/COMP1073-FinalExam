@@ -1,5 +1,9 @@
 // IIFE - Immediately Invoked Function Expression
 (function () {
+    // Ryan Quigley
+    // 200239087
+    // Georgian College
+    // COMP-1073
     var canvas;
     var canvasWidth;
     var canvasHeight;
@@ -22,6 +26,11 @@
         stage.enableMouseOver(20);
         Main(); // call the main function
     }
+    /**
+     *
+     *
+     * @param {createjs.Event} event
+     */
     function Update(event) {
         stage.update();
     }
@@ -45,7 +54,6 @@
             roll = Math.floor(Math.random() * 6) + 1;
             return roll;
         }
-        // Rolls the dice
         function Roll() {
             die1 = randomNumber();
             die2 = randomNumber();
