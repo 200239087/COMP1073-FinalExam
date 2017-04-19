@@ -28,12 +28,7 @@
     Main(); // call the main function
   }
 
-
   function Update(event: createjs.Event): void {
-
-        
-
-    
     stage.update();
   }
 
@@ -44,7 +39,7 @@
     canvasHeight = window.innerHeight * 1.5;
     canvasHalfWidth = canvasWidth * 0.5;
     canvasHalfHeight = canvasHeight * 0.5;
-    
+
     die1Label = new objects.Label("0", "30px", "Times New Roman", "#000000", canvasHalfWidth - 100, canvasHalfHeight, false);
     stage.addChild(die1Label);
     die2Label = new objects.Label("0", "30px", "Times New Roman", "#000000", canvasHalfWidth + 300, canvasHalfHeight, false);
@@ -65,7 +60,7 @@
       die1 = randomNumber();
       die2 = randomNumber();
 
-      switch(die1) {
+      switch (die1) {
         case 1: {
           firstDie = new objects.Button("../../Assets/images/1.png", canvasHalfWidth - 200, canvasHalfHeight - 250, false, canvasHalfWidth * 0.1, canvasHalfHeight * 0.1);
           stage.addChild(firstDie);
@@ -98,7 +93,7 @@
         } break;
       }
 
-      switch(die2) {
+      switch (die2) {
         case 1: {
           secondDie = new objects.Button("../../Assets/images/1.png", canvasHalfWidth + 200, canvasHalfHeight - 250, false, 1, 1);
           stage.addChild(secondDie);
@@ -137,14 +132,14 @@
     stage.addChild(rollButton);
 
     rollButton.on("click", function (event: createjs.MouseEvent) {
-      Roll(); 
+      Roll();
     })
 
     canvas.setAttribute("width", canvasWidth.toString());
     canvas.setAttribute("height", canvasHeight.toString());
   }
 
-    
+
 
   // window binding events
   window.onload = Start;
