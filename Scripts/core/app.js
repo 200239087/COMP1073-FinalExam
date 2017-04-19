@@ -49,105 +49,6 @@
         stage.addChild(firstDie);
         secondDie = new objects.Button("../../Assets/images/blank.png", canvasHalfWidth + 200, canvasHalfHeight - 250, false, 1, 1);
         stage.addChild(secondDie);
-        // Creates the dice roll
-        function randomNumber() {
-            roll = Math.floor(Math.random() * 6) + 1;
-            return roll;
-        }
-        function Roll() {
-            die1 = randomNumber();
-            die2 = randomNumber();
-            // Different dice roll causes different image and label
-            switch (die1) {
-                case 1:
-                    {
-                        firstDie = new objects.Button("../../Assets/images/1.png", canvasHalfWidth - 200, canvasHalfHeight - 250, false, canvasHalfWidth * 0.1, canvasHalfHeight * 0.1);
-                        stage.addChild(firstDie);
-                        die1Label.text = "1";
-                    }
-                    break;
-                case 2:
-                    {
-                        firstDie = new objects.Button("../../Assets/images/2.png", canvasHalfWidth - 200, canvasHalfHeight - 250, false, canvasHalfWidth * 0.1, canvasHalfHeight * 0.1);
-                        stage.addChild(firstDie);
-                        die1Label.text = "2";
-                    }
-                    break;
-                case 3:
-                    {
-                        firstDie = new objects.Button("../../Assets/images/3.png", canvasHalfWidth - 200, canvasHalfHeight - 250, false, canvasHalfWidth * 0.1, canvasHalfHeight * 0.1);
-                        stage.addChild(firstDie);
-                        die1Label.text = "3";
-                    }
-                    break;
-                case 4:
-                    {
-                        firstDie = new objects.Button("../../Assets/images/4.png", canvasHalfWidth - 200, canvasHalfHeight - 250, false, canvasHalfWidth * 0.1, canvasHalfHeight * 0.1);
-                        stage.addChild(firstDie);
-                        die1Label.text = "4";
-                    }
-                    break;
-                case 5:
-                    {
-                        firstDie = new objects.Button("../../Assets/images/5.png", canvasHalfWidth - 200, canvasHalfHeight - 250, false, canvasHalfWidth * 0.1, canvasHalfHeight * 0.1);
-                        stage.addChild(firstDie);
-                        die1Label.text = "5";
-                    }
-                    break;
-                case 6:
-                    {
-                        firstDie = new objects.Button("../../Assets/images/6.png", canvasHalfWidth - 200, canvasHalfHeight - 250, false, canvasHalfWidth * 0.1, canvasHalfHeight * 0.1);
-                        stage.addChild(firstDie);
-                        die1Label.text = "6";
-                    }
-                    break;
-            }
-            // Different dice roll causes different image and label
-            switch (die2) {
-                case 1:
-                    {
-                        secondDie = new objects.Button("../../Assets/images/1.png", canvasHalfWidth + 200, canvasHalfHeight - 250, false, 1, 1);
-                        stage.addChild(secondDie);
-                        die2Label.text = "1";
-                    }
-                    break;
-                case 2:
-                    {
-                        secondDie = new objects.Button("../../Assets/images/2.png", canvasHalfWidth + 200, canvasHalfHeight - 250, false, 1, 1);
-                        stage.addChild(secondDie);
-                        die2Label.text = "2";
-                    }
-                    break;
-                case 3:
-                    {
-                        secondDie = new objects.Button("../../Assets/images/3.png", canvasHalfWidth + 200, canvasHalfHeight - 250, false, 1, 1);
-                        stage.addChild(secondDie);
-                        die2Label.text = "3";
-                    }
-                    break;
-                case 4:
-                    {
-                        secondDie = new objects.Button("../../Assets/images/4.png", canvasHalfWidth + 200, canvasHalfHeight - 250, false, 1, 1);
-                        stage.addChild(secondDie);
-                        die2Label.text = "4";
-                    }
-                    break;
-                case 5:
-                    {
-                        secondDie = new objects.Button("../../Assets/images/5.png", canvasHalfWidth + 200, canvasHalfHeight - 250, false, 1, 1);
-                        stage.addChild(secondDie);
-                        die2Label.text = "5";
-                    }
-                    break;
-                case 6:
-                    {
-                        secondDie = new objects.Button("../../Assets/images/6.png", canvasHalfWidth + 200, canvasHalfHeight - 250, false, 1, 1);
-                        stage.addChild(secondDie);
-                        die2Label.text = "6";
-                    }
-                    break;
-            }
-        }
         // Places the Roll button
         rollButton = new objects.Button("../../Assets/images/rollButton.png", canvasHalfWidth + 100, canvasHalfHeight + 100, true, 150, 50);
         stage.addChild(rollButton);
@@ -157,6 +58,105 @@
         });
         canvas.setAttribute("width", canvasWidth.toString());
         canvas.setAttribute("height", canvasHeight.toString());
+    }
+    // Creates the dice roll
+    function randomNumber() {
+        roll = Math.floor(Math.random() * 6) + 1;
+        return roll;
+    }
+    function Roll() {
+        die1 = randomNumber();
+        die2 = randomNumber();
+        // Different dice roll causes different image and label
+        switch (die1) {
+            case 1:
+                {
+                    firstDie = new objects.Button("../../Assets/images/1.png", canvasHalfWidth - 200, canvasHalfHeight - 250, false, canvasHalfWidth * 0.1, canvasHalfHeight * 0.1);
+                    stage.addChild(firstDie);
+                    die1Label.text = "1";
+                }
+                break;
+            case 2:
+                {
+                    firstDie = new objects.Button("../../Assets/images/2.png", canvasHalfWidth - 200, canvasHalfHeight - 250, false, canvasHalfWidth * 0.1, canvasHalfHeight * 0.1);
+                    stage.addChild(firstDie);
+                    die1Label.text = "2";
+                }
+                break;
+            case 3:
+                {
+                    firstDie = new objects.Button("../../Assets/images/3.png", canvasHalfWidth - 200, canvasHalfHeight - 250, false, canvasHalfWidth * 0.1, canvasHalfHeight * 0.1);
+                    stage.addChild(firstDie);
+                    die1Label.text = "3";
+                }
+                break;
+            case 4:
+                {
+                    firstDie = new objects.Button("../../Assets/images/4.png", canvasHalfWidth - 200, canvasHalfHeight - 250, false, canvasHalfWidth * 0.1, canvasHalfHeight * 0.1);
+                    stage.addChild(firstDie);
+                    die1Label.text = "4";
+                }
+                break;
+            case 5:
+                {
+                    firstDie = new objects.Button("../../Assets/images/5.png", canvasHalfWidth - 200, canvasHalfHeight - 250, false, canvasHalfWidth * 0.1, canvasHalfHeight * 0.1);
+                    stage.addChild(firstDie);
+                    die1Label.text = "5";
+                }
+                break;
+            case 6:
+                {
+                    firstDie = new objects.Button("../../Assets/images/6.png", canvasHalfWidth - 200, canvasHalfHeight - 250, false, canvasHalfWidth * 0.1, canvasHalfHeight * 0.1);
+                    stage.addChild(firstDie);
+                    die1Label.text = "6";
+                }
+                break;
+        }
+        // Different dice roll causes different image and label
+        switch (die2) {
+            case 1:
+                {
+                    secondDie = new objects.Button("../../Assets/images/1.png", canvasHalfWidth + 200, canvasHalfHeight - 250, false, 1, 1);
+                    stage.addChild(secondDie);
+                    die2Label.text = "1";
+                }
+                break;
+            case 2:
+                {
+                    secondDie = new objects.Button("../../Assets/images/2.png", canvasHalfWidth + 200, canvasHalfHeight - 250, false, 1, 1);
+                    stage.addChild(secondDie);
+                    die2Label.text = "2";
+                }
+                break;
+            case 3:
+                {
+                    secondDie = new objects.Button("../../Assets/images/3.png", canvasHalfWidth + 200, canvasHalfHeight - 250, false, 1, 1);
+                    stage.addChild(secondDie);
+                    die2Label.text = "3";
+                }
+                break;
+            case 4:
+                {
+                    secondDie = new objects.Button("../../Assets/images/4.png", canvasHalfWidth + 200, canvasHalfHeight - 250, false, 1, 1);
+                    stage.addChild(secondDie);
+                    die2Label.text = "4";
+                }
+                break;
+            case 5:
+                {
+                    secondDie = new objects.Button("../../Assets/images/5.png", canvasHalfWidth + 200, canvasHalfHeight - 250, false, 1, 1);
+                    stage.addChild(secondDie);
+                    die2Label.text = "5";
+                }
+                break;
+            case 6:
+                {
+                    secondDie = new objects.Button("../../Assets/images/6.png", canvasHalfWidth + 200, canvasHalfHeight - 250, false, 1, 1);
+                    stage.addChild(secondDie);
+                    die2Label.text = "6";
+                }
+                break;
+        }
     }
     // window binding events
     window.onload = Start;

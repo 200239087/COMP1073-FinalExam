@@ -62,6 +62,19 @@
     secondDie = new objects.Button("../../Assets/images/blank.png", canvasHalfWidth + 200, canvasHalfHeight - 250, false, 1, 1);
     stage.addChild(secondDie);
 
+    // Places the Roll button
+    rollButton = new objects.Button("../../Assets/images/rollButton.png", canvasHalfWidth + 100, canvasHalfHeight + 100, true, 150, 50);
+    stage.addChild(rollButton);
+
+    // When the Roll button is pushed, call the Roll function
+    rollButton.on("click", function (event: createjs.MouseEvent) {
+      Roll();
+    })
+
+    canvas.setAttribute("width", canvasWidth.toString());
+    canvas.setAttribute("height", canvasHeight.toString());
+  }
+
     // Creates the dice roll
     function randomNumber() {
       roll = Math.floor(Math.random() * 6) + 1;
@@ -141,21 +154,7 @@
       }
     }
 
-    // Places the Roll button
-    rollButton = new objects.Button("../../Assets/images/rollButton.png", canvasHalfWidth + 100, canvasHalfHeight + 100, true, 150, 50);
-    stage.addChild(rollButton);
-
-    // When the Roll button is pushed, call the Roll function
-    rollButton.on("click", function (event: createjs.MouseEvent) {
-      Roll();
-    })
-
-    canvas.setAttribute("width", canvasWidth.toString());
-    canvas.setAttribute("height", canvasHeight.toString());
-  }
-
-
-
+    
   // window binding events
   window.onload = Start;
 
