@@ -13,7 +13,7 @@ module objects {
     /**
      * Creates an instance of Button.
      *
-     * @param {string} _imageString
+     * @param {string} imageString
      * @param {number} _width
      * @param {number} _height
      * @param {number} x
@@ -23,12 +23,12 @@ module objects {
      * @memberOf Button
      */
     constructor(
-      loader: createjs.LoadQueue,
-      private _imageString:string,
+      imageString:string,
       x:number, y:number,
-      private _isCentered: boolean) {
-      // send the result of the preload queue to the superclass constructor
-      super(loader.getResult(_imageString));
+      private _isCentered: boolean, 
+      private _width: number,
+      private _height: number) {
+      super(imageString);
 
       // check to see if the user requires the button's pivot to be centered
       if(_isCentered) {
@@ -56,9 +56,9 @@ module objects {
      * @memberOf Button
      */
     private _mouseOver(event:createjs.MouseEvent) {
-      this.alpha = 0.7; // 70% opaque - 30% transparent
-      this.scaleX = 1.2; // 120% of scale
-      this.scaleY = 1.2;
+      this.alpha = 0.8; // 70% opaque - 30% transparent
+      this.scaleX = 1.0; 
+      this.scaleY = 1.0;
     }
 
     /**

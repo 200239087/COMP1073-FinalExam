@@ -23,7 +23,7 @@ var objects;
         /**
          * Creates an instance of Button.
          *
-         * @param {string} _imageString
+         * @param {string} imageString
          * @param {number} _width
          * @param {number} _height
          * @param {number} x
@@ -32,12 +32,11 @@ var objects;
          *
          * @memberOf Button
          */
-        function Button(loader, _imageString, x, y, _isCentered) {
-            var _this = 
-            // send the result of the preload queue to the superclass constructor
-            _super.call(this, loader.getResult(_imageString)) || this;
-            _this._imageString = _imageString;
+        function Button(imageString, x, y, _isCentered, _width, _height) {
+            var _this = _super.call(this, imageString) || this;
             _this._isCentered = _isCentered;
+            _this._width = _width;
+            _this._height = _height;
             // check to see if the user requires the button's pivot to be centered
             if (_isCentered) {
                 _this.regX = _this.getBounds().width * 0.5;
@@ -61,9 +60,9 @@ var objects;
          * @memberOf Button
          */
         Button.prototype._mouseOver = function (event) {
-            this.alpha = 0.7; // 70% opaque - 30% transparent
-            this.scaleX = 1.2; // 120% of scale
-            this.scaleY = 1.2;
+            this.alpha = 0.8; // 70% opaque - 30% transparent
+            this.scaleX = 1.0;
+            this.scaleY = 1.0;
         };
         /**
          * The mouseout event handler
