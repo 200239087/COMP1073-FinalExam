@@ -32,7 +32,6 @@
     stage.update();
   }
 
-
   function Main(): void {
 
     canvasWidth = window.innerWidth * 1.5;
@@ -40,22 +39,25 @@
     canvasHalfWidth = canvasWidth * 0.5;
     canvasHalfHeight = canvasHeight * 0.5;
 
+    // Dice Labels
     die1Label = new objects.Label("0", "30px", "Times New Roman", "#000000", canvasHalfWidth - 100, canvasHalfHeight, false);
     stage.addChild(die1Label);
     die2Label = new objects.Label("0", "30px", "Times New Roman", "#000000", canvasHalfWidth + 300, canvasHalfHeight, false);
     stage.addChild(die2Label);
 
+    // Dice Images
     firstDie = new objects.Button("../../Assets/images/blank.png", canvasHalfWidth - 200, canvasHalfHeight - 250, false, canvasHalfWidth * 0.1, canvasHalfHeight * 0.1);
     stage.addChild(firstDie);
-
     secondDie = new objects.Button("../../Assets/images/blank.png", canvasHalfWidth + 200, canvasHalfHeight - 250, false, 1, 1);
     stage.addChild(secondDie);
 
+    // Creates the dice roll
     function randomNumber() {
       roll = Math.floor(Math.random() * 6) + 1;
       return roll;
     }
 
+    // Rolls the dice
     function Roll() {
       die1 = randomNumber();
       die2 = randomNumber();
